@@ -4,13 +4,14 @@
     "import/no-anonymous-default-export": "off",
     "tailwindcss/no-custom-classname": "off",
     "max-len": [2, 250],
+    "object-curly-newline": "off",
+    "camelcase": ["error", { "ignoreImports": true }],
     "no-multiple-empty-lines": [
       "error",
       {
         "max": 1,
         "maxEOF": 1
       }
-    ],
-    "object-curly-newline": 0
+    ]
   }
 }
