@@ -2,6 +2,7 @@
   "extends": ["next/core-web-vitals", "standard", "plugin:tailwindcss/recommended", "prettier"],
   "rules": {
     "import/no-anonymous-default-export": "off",
+    "tailwindcss/no-custom-classname": "off",
     "max-len": [2, 250],
     "no-multiple-empty-lines": [
       "error",
