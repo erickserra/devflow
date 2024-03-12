@@ -154,3 +154,15 @@ code {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.rootLayout-mainContent-xl {
+  width: calc(100svw - 266px - 330px);
+}
+
+.rootLayout-mainContent-lg {
+  width: calc(100svw - 266px);
+}
+
+.rootLayout-mainContent-md {
+  width: calc(100svw - 90px);
+}
