@@ -6,6 +6,7 @@
     "max-len": [2, 250],
     "object-curly-newline": "off",
     "camelcase": ["error", { "ignoreImports": true }],
+    "react-hooks/exhaustive-deps": "off",
     "no-multiple-empty-lines": [
       "error",
       {
