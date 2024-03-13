@@ -14,7 +14,7 @@ const PopularQuestions = ({ questions }: Props) => {
 
   return questions.map((question) => (
     <Link
-      key={question.title}
+      key={question.id}
       href={`/questions/${question.id}`}
       className="group flex cursor-pointer items-center justify-between gap-7"
     >

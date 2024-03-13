@@ -10,7 +10,7 @@ const RootLayout = ({ children }: React.PropsWithChildren) => {
       <div>
         <Sidebar />
         <section className="min-h-[100svh] pt-[100px]">
-          <div className="md:rootLayout-mainContent-md lg:rootLayout-mainContent-lg xl:rootLayout-mainContent-xl px-24 py-16 max-md:w-full md:ml-[90px] lg:ml-[266px]">
+          <div className="px-16 py-8 max-sm:w-full max-sm:px-8 sm:ml-[90px] sm:w-[calc(100svw-90px)] lg:ml-[266px] lg:w-[calc(100svw-266px)] xl:w-[calc(100svw-266px-350px)]">
             {children}
           </div>
         </section>

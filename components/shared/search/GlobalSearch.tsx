@@ -15,7 +15,7 @@ const GlobalSearch = () => {
           placeholder="Search anything globally..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="paragraph-regular text-light400_light500 placeholder background-light800_darkgradient focus-visible:background-image-none ml-3 border-none shadow-none outline-none focus-visible:ring-0 focus-visible:ring-offset-light-400"
+          className="paragraph-regular text-light400_light500 placeholder focus-visible:background-image-none ml-3 border-none bg-transparent shadow-none outline-none focus-visible:ring-0 focus-visible:ring-offset-light-400"
         />
       </div>
     </div>

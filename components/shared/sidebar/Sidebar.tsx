@@ -24,7 +24,7 @@ const Sidebar = () => {
     <aside
       className="background-light900_dark200 custom-scrollbar light-border fixed inset-y-0
       left-0 flex w-[90px] flex-col justify-between overflow-y-auto border-r px-4 pt-[130px]
-      shadow-light-300 dark:shadow-none max-md:hidden lg:w-[266px] lg:px-6"
+      shadow-light-300 dark:shadow-none max-sm:hidden lg:w-[266px] lg:px-6"
     >
       <div className="flex flex-col gap-6">{renderSidebarLinks()}</div>
 
