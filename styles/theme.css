@@ -202,4 +202,8 @@
   .text-input {
     @apply bg-light-700 dark:bg-dark-300 text-[16px] font-normal leading-[22.4px] border-light-700 dark:border-dark-400 text-dark-300 dark:text-light-700 min-h-[56px] shadow-none border-none outline-none border focus-visible:ring-offset-light-400 focus-visible:ring-offset-[0px] ring-light-400 focus-visible:ring-[1px];
   }
+
+  .primary-button {
+    @apply text-[16px] font-medium leading-[22.4px] min-h-[46px] rounded-lg bg-primary-500 px-4 py-3 text-light-900 ring-offset-2 transition-all hover:bg-primary-500 hover:brightness-110 active:ring-2 dark:bg-primary-500 dark:text-light-900 ring-none border-none shadow-none outline-none ring-primary-500 ring-offset-transparent focus:brightness-90;
+  }
 }

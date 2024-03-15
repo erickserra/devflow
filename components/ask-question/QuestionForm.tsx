@@ -13,14 +13,19 @@ import FormTinyMceEditor from '../shared/form-elements/FormTinyMceEditor';
 import { Badge } from '../ui/badge';
 import Image from 'next/image';
 import PrimaryButton from '../shared/buttons/PrimaryButton';
+import { createQuestion } from '@/lib/actions/question.action';
+import { useRouter } from 'next/navigation';
 
 type Schema = z.infer<typeof QuestionFormSchema>;
 
 type Props = {
   isEdit?: boolean;
+  mongoUserId: string;
 };
 
-const QuestionForm = ({ isEdit }: Props) => {
+const QuestionForm = ({ isEdit, mongoUserId }: Props) => {
+  const router = useRouter();
+
   const {
     register,
     handleSubmit,
@@ -87,10 +92,17 @@ const QuestionForm = ({ isEdit }: Props) => {
     return isEdit ? 'Edit Question' : 'Post Question';
   }, [isEdit, isSubmitting]);
 
-  const onSubmit = (data: Schema) => {
-    console.log({ data });
-    // make an async call to the api to create a question
-    // navigate to homepage
+  const onSubmit = async (data: Schema) => {
+    try {
+      await createQuestion({
+        title: data.title,
+        content: data.explanation,
+        tags: data.tags,
+        author: JSON.parse(mongoUserId),
+        path: '/',
+      });
+      router.push('/');
+    } catch (e) {}
   };
 
   return (
