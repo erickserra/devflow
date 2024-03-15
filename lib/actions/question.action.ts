@@ -3,7 +3,6 @@ import { DbModels } from '@/database/models';
 import { connectToDatabase } from '../mongoose';
 import { CreateQuestionParams, GetQuestionsParams } from '@/types/server-actions';
 import { revalidatePath } from 'next/cache';
-import { IQuestionSchema } from '@/database/models/question.model';
 
 export async function createQuestion(params: CreateQuestionParams) {
   try {

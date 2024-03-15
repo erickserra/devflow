@@ -7,6 +7,8 @@
     "object-curly-newline": "off",
     "camelcase": ["error", { "ignoreImports": true }],
     "react-hooks/exhaustive-deps": "off",
+    "no-unused-vars": "error",
+    "no-undef": "error",
     "no-multiple-empty-lines": [
       "error",
       {

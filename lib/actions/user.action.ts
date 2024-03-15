@@ -54,7 +54,7 @@ export async function deleteUser(params: DeleteUserParams): Promise<void> {
     }
 
     // first we need to delete the user question's
-    const questionsIds = await DbModels.Question.find({ author: user._id }).distinct('_id');
+    // const questionsIds = await DbModels.Question.find({ author: user._id }).distinct('_id');
     await DbModels.Question.deleteMany({ author: user._id });
 
     // TODO: delete user answers, comments, etc.
