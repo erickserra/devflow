@@ -22,7 +22,7 @@ const Metric = ({ imgUrl, alt, value, title, textStyles, isAuthor, href }: Props
         width={16}
         height={16}
         alt={alt}
-        className={`object-contain ${href ? 'rounded-full' : ' '}`}
+        className={`size-[16px] object-cover ${href ? 'rounded-full' : ' '}`}
       />
 
       <Element href={href || ''} className={`body-medium flex items-center gap-1 ${textStyles}`}>

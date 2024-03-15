@@ -9,6 +9,11 @@ import { getQuestions } from '@/lib/actions/question.action';
 import Link from 'next/link';
 
 export default async function Home() {
+  await new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('fodase');
+    }, 3000);
+  });
   const questionsResponse = await getQuestions({});
 
   return (
@@ -58,7 +63,7 @@ export default async function Home() {
         ) : (
           <NoResults
             title="There is no question to show"
-            description="Be the first to break the silence! 🚀 Ask a Question and kickstart the discussion. our query could be the next big thing others learn from. Get involved! 💡"
+            description="Be the first to break the silence! 🚀 Ask a Question and kickstart the discussion. Your query could be the next big thing others learn from. Get involved! 💡"
             link="/"
             linkText="Ask a Question"
           />

@@ -65,7 +65,7 @@
     }
   },
   "lint-staged": {
-    "{app}/**/*.{ts,tsx}": [
+    "app/**/*.{ts,tsx}": [
       "prettier --list-different --config ./.prettierrc --write",
       "eslint --fix"
     ]

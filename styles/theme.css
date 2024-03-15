@@ -204,6 +204,6 @@
   }
 
   .primary-button {
-    @apply text-[16px] font-medium leading-[22.4px] min-h-[46px] rounded-lg bg-primary-500 px-4 py-3 text-light-900 ring-offset-2 transition-all hover:bg-primary-500 hover:brightness-110 active:ring-2 dark:bg-primary-500 dark:text-light-900 ring-none border-none shadow-none outline-none ring-primary-500 ring-offset-transparent focus:brightness-90;
+    @apply text-[16px] font-medium leading-[22.4px] min-h-[46px] rounded-lg bg-primary-500 px-4 py-3 text-light-900 ring-offset-2 transition-all hover:bg-primary-500 hover:brightness-110 active:ring-2 dark:bg-primary-500 dark:text-light-900 border-none shadow-none outline-none ring-primary-500 ring-offset-transparent focus:brightness-90;
   }
 }
