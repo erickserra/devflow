@@ -55,15 +55,15 @@ export async function POST(req: Request) {
   console.log('Webhook body:', body);
 
   if (eventType === 'user.created') {
-    const { id, email_addresses, image_url, username, first_name, last_name } = evt.data;
-    console.log({ newUser: evt.data });
+    const { id, email_addresses, image_url, first_name, last_name } = evt.data;
+    console.log('use.created: ', { newUser: evt.data });
 
     const createdUser = await createUser({
       email: email_addresses[0].email_address,
       name: `${first_name} ${last_name || ''}`,
       clerkId: id,
       picture: image_url,
-      username: username || '',
+      username: 'erickserra',
     });
 
     return NextResponse.json({ message: 'OK', createdUser });

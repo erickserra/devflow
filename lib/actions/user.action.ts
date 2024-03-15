@@ -12,7 +12,7 @@ export async function getUserById(params: { userId: string }): Promise<IUserSche
     const { userId } = params;
     return await DbModels.User.findOne({ clerkId: userId });
   } catch (e) {
-    console.error(e);
+    console.error('Get User By Id Error: ', e);
     return null;
   }
 }
@@ -22,7 +22,7 @@ export async function createUser(data: CreateUserParams): Promise<IUserSchema | 
     connectToDatabase();
     return await DbModels.User.create(data);
   } catch (e) {
-    console.error(e);
+    console.error('Create User Error: ', e);
     return null;
   }
 }
@@ -38,7 +38,7 @@ export async function updateUser(params: UpdateUserParams): Promise<void> {
 
     revalidatePath(path);
   } catch (e) {
-    console.error(e);
+    console.error('Update User Error: ', e);
   }
 }
 
@@ -50,7 +50,7 @@ export async function deleteUser(params: DeleteUserParams): Promise<void> {
     const user = await DbModels.User.findOne({ clerkId });
 
     if (!user) {
-      throw new Error('User not found');
+      throw new Error('Delete User Error: User not found');
     }
 
     // first we need to delete the user question's
@@ -66,6 +66,6 @@ export async function deleteUser(params: DeleteUserParams): Promise<void> {
 
     return deletedUser;
   } catch (e) {
-    console.error(e);
+    console.error('Delete User Error: ', e);
   }
 }
